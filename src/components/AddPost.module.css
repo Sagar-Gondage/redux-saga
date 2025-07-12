@@ -1,0 +1,137 @@
+/* AddPost Component Styles */
+
+/* Container style */
+.container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 15px;
+}
+
+/* Card styles */
+.card {
+  width: 700px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: none;
+  overflow: hidden;
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  border-bottom: none;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Form styles */
+.formGroup {
+  margin-bottom: 1.2rem;
+}
+
+.label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  border-radius: 8px;
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.textArea {
+  min-height: 70px;
+  border-radius: 8px;
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  border-color: transparent;
+  border-radius: 50px;
+  padding: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(56, 239, 125, 0.3);
+  transition: all 0.3s ease;
+}
+
+.errorText {
+  color: #ff4757;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.iconMargin {
+  margin-right: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    border-radius: 10px;
+  }
+
+  .cardHeader {
+    padding: 0.8rem;
+  }
+
+  .cardHeader h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 10px;
+  }
+
+  .card {
+    border-radius: 8px;
+  }
+
+  .cardHeader {
+    padding: 0.7rem;
+  }
+
+  .cardHeader h4 {
+    font-size: 1.1rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
+
+  .input, .textArea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .errorText {
+    font-size: 0.8rem;
+  }
+}

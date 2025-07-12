@@ -1,0 +1,270 @@
+/* PostList Component Styles */
+
+/* Container style */
+.container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 15px;
+}
+
+/* Card styles */
+.card {
+  width: 700px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: none;
+  overflow: hidden;
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  border-bottom: none;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* List styles */
+.listGroup {
+  /* Removed max-height and overflow-y for non-scrollable behavior */
+  padding: 0.5rem;
+}
+
+.listItem {
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Post content styles */
+.postTitle {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.postBody {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-left: 3px solid #2575fc;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.badgeCustom {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  padding: 0.5rem 0.75rem;
+  font-weight: normal;
+}
+
+.buttonRemove {
+  background: #ff4757;
+  border-color: #ff4757;
+  border-radius: 50px;
+  padding: 0.25rem 0.75rem;
+  box-shadow: 0 2px 5px rgba(255, 71, 87, 0.3);
+  transition: all 0.2s ease;
+}
+
+.noPostsMessage {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6c757d;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Button styles */
+.refreshButton {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border-color: transparent;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  z-index: 3;
+  padding: 0;
+}
+
+/* Loading indicators */
+.loadingMoreSpinner {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  background: rgba(106, 17, 203, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.loadingMoreText {
+  color: #6a11cb;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+}
+
+/* Debug panel */
+.debugPanel {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 9999;
+}
+
+/* Spinner container */
+.spinnerContainer {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.spinnerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.spinnerPrimary {
+  opacity: 0.7;
+}
+
+.spinnerSecondary {
+  animation: spin 1s linear infinite 0.5s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    border-radius: 10px;
+  }
+
+  .cardHeader {
+    padding: 0.8rem;
+  }
+
+  .cardHeader h4 {
+    font-size: 1.2rem;
+  }
+
+  .listGroup {
+    padding: 0.4rem;
+  }
+
+  .listItem {
+    padding: 0.8rem;
+    margin: 0.4rem 0;
+  }
+
+  .postTitle {
+    font-size: 1rem;
+  }
+
+  .postBody {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 10px;
+  }
+
+  .card {
+    border-radius: 8px;
+  }
+
+  .cardHeader {
+    padding: 0.7rem;
+  }
+
+  .cardHeader h4 {
+    font-size: 1.1rem;
+  }
+
+  .listGroup {
+    padding: 0.3rem;
+  }
+
+  .listItem {
+    padding: 0.7rem;
+    margin: 0.3rem 0;
+    border-radius: 6px;
+  }
+
+  .postTitle {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .postBody {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding-left: 0.7rem;
+    border-left-width: 2px;
+    margin-bottom: 0.7rem;
+  }
+
+  .badgeCustom {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .buttonRemove {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .refreshButton {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+    right: 0.7rem;
+  }
+
+  .noPostsMessage {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .loadingMoreSpinner {
+    padding: 0.7rem;
+  }
+
+  .loadingMoreText {
+    font-size: 0.85rem;
+  }
+}
