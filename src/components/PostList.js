@@ -99,11 +99,6 @@ const PostList = () => {
         setTimeout(() => setRefreshing(false), 2000);
     };
 
-    // Manual trigger for debugging
-    const handleManualLoadMore = () => {
-        loadMorePosts();
-    };
-
     // Content loader for skeleton UI while loading
     const ContentLoader = () => (
         <div className={`d-flex justify-content-center ${styles.container}`}>
